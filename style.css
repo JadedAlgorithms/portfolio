@@ -1,35 +1,130 @@
-body {
-  font-family: sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  box-sizing: border-box;
 }
 
+/* Fonts and base settings */
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #330000;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #3b0000,
+    #3b0000 20px,
+    #1a0000 20px,
+    #1a0000 40px
+  );
+  color: #fefefe;
+}
+
+/* Header */
 header {
-  background: #222;
-  color: white;
-  padding: 1rem;
+  background: rgba(20, 0, 0, 0.85);
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 3px solid #771111;
 }
 
-nav ul {
-  list-style: none;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffe7d5;
+}
+
+.header-img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border-radius: 4px;
+  image-rendering: pixelated;
+}
+
+/* Navigation */
+nav {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  padding: 0;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 nav a {
-  color: white;
+  background-color: #4b1e1e;
+  color: #fdf6e3;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
+nav a:hover {
+  background-color: #6b2e2e;
+}
+
+/* Main Content */
 main {
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #ffc466;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  font-size: 1rem;
+  color: #f0e6e6;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
 footer {
+  background-color: #2a0a0a;
   text-align: center;
   padding: 1rem;
-  background: #eee;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 2px solid #771111;
+}
+
+/* Reveal animation (optional if using JS) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
 }
